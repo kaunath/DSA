@@ -123,7 +123,7 @@ cout<< "printing element of vector using traditional for loop ";
 
 
 	// 3D vector 10 x 20 x 30 // int arr[10][20][30] 
-	vector<vector<vector<int>>> vec_3(10, vector<vector<int>> vec_2(20, vector<int> (30, 0)));
+	// vector<vector<vector<int>>> vec_3(10, vector<vector<int>> vec_2(20, vector<int> (30, 0)));
 
 	return 0;
 }
