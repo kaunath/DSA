@@ -4,7 +4,7 @@ using namespace std;
 
 
 /*
-refer to the notes for vector docs in theory
+refer to the notes for sets and maps docs in theory
 */
 int main()
 {
@@ -68,8 +68,8 @@ int main()
 	pair< pair<int,int>, int> pr_2 = {{1,2}, 2}; 
 	cout << pr_2.first.second << endl; // 2
 	pair<pair<int,int>, pair<int,int>> pr_3 = {{1,2},{2, 4}};
-	cout << pr_3.first.first; // 1 
-	cout << pr_3.second.second; // 4 
+	cout << pr_3.first.first<< endl; // 1 
+	cout << pr_3.second.second<< endl; // 4 
 
 	/*
 	Also possible
