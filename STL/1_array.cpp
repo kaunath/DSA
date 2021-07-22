@@ -11,8 +11,8 @@ int main() {
 	array <int ,5> arr_1;
 	array<int, 5> arr; 
 	
-	// 1. arr.fill(10)
-	arr_1.fill(10);  //fill(10) will fill all the index with 10
+	//1. arr.fill(10)
+	arr.fill(10);  //fill(10) will fill all the index with 10
 	cout << "printing the array " << '\n';
 	for(int i = 0;i<5;i++) {
 		
@@ -46,8 +46,7 @@ int main() {
 	/*
 		begin, end, rbegin, rend
 	*/
-	
-	}cout << "using begin, end iterator " << '\n';
+	cout << "using begin, end iterator " << '\n';
 	for (auto it = arr.begin();  it != arr.end(); it++)
 	{
 		cout << *it << " ";
@@ -55,12 +54,15 @@ int main() {
 	cout << '\n'<< '\n';
 	
 	cout << "using rbegin, rend iterator to print the arry in reverse order" << '\n';
+	
 	for (auto it = arr.rbegin();  it != arr.rend(); it++)
 	{
 		cout << *it << " ";
 
+	}
 
 	/* size 
+
 	cout << arr.size();  //prints size
 
 	// front 

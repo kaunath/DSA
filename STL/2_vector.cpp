@@ -113,14 +113,33 @@ cout<< "printing element of vector using traditional for loop ";
 	
 	vect[2].push_back(1); 
 
-
+	cout << "printing element for array of vector" <<endl;
 	vector<int> arr_4[4]; 
 	arr_4[0].push_back(0); 
 	arr_4[1].push_back(112); 
 	arr_4[2].push_back(32); 
 	arr_4[3].push_back(230); 
+	arr_4[3].push_back(40); 
 	//arr_4[4].push_back(434); gives error cause array size exceeds to 4 here
+	for (auto it : arr_4)
+	{
+	/* code */
+		for (auto it_1 = it.begin() ; it_1!=it.end(); it_1++)
+		{
+			cout << *it_1 << " ";
+		}
+			/*
+			OR
+			for (auto it_1: it)
+			{
+				
+				cout << it_1<< " ";
+			}
+			*/
+			
 
+		cout << endl;
+	}	
 
 	// 3D vector 10 x 20 x 30 // int arr[10][20][30] 
 	// vector<vector<vector<int>>> vec_3(10, vector<vector<int>> vec_2(20, vector<int> (30, 0)));

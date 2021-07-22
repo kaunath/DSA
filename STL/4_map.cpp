@@ -78,8 +78,15 @@ int main()
 	map< pair<int,int>, int> mpp; 
 	*/
 
-	multimap<string, int> muul_mpp;
-	mpp.emplace("raj", 2); 
-	mpp.emplace("raj", 5); 
+	cout << "multimap" << endl;
+	multimap<string, int> mul_mpp;
+	mul_mpp.emplace("raj", 2); 
+	mul_mpp.emplace("raj", 5); 
+
+	for (auto it: mul_mpp)
+	{
+		cout << it.first << "-> " << it.second << endl; 
+		
+	}
 
 }
