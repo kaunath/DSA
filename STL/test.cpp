@@ -1,133 +1,10 @@
 #include <bits/stdc++.h> 
 using namespace std; 
 
-int main(int argc, char const *argv[])
+int main()
 {
 
 
-	// Algorithms 
-	// sorting 
-	// array, vector 
-	int n;
-	cin >> n; 
-	int arr[n]; 
-	for(int i = 0;i<n;i++) cin >> arr[i]; 
-	// takes n log n 
-	sort(arr, arr+n); // in increasing order  
-	// sort from 1 to 3 
-	sort(arr + 1, arr + 4); 
-    
-    vector<int> vec(5, 0);
-    for(int i = 0;i<n;i++) {
-    	cin >> vec[i]; 
-    }
-
-    sort(vec.begin(), vec.end()); // [)
-
-    // vec -> {1, 6, 2, 7, 4} 
-    //         0  1  2  3  4 
-    // sort it so that only indexes from 1 to 3  
-    // final vec -> {1, 2, 6, 7, 4}
-    sort(vec.begin() + 1, vec.begin() + 4); // [1, 4)
-
-
-    // If I wanna reverse
-    // reverse(startIterator, endIterator) -> [)  
-    reverse(arr, arr+n); 
-
-    reverse(arr + 1, arr + 4); 
-
-    reverse(vec.begin(), vec.end()); 
-
-    reverse(vec.begin() + 1, vec.begin() + 4); 
-
-
-
-    // If i want to fine the maximum elements in any index range 
-    // i to j give me the maximum 
-
-    // *max_element(firstIterator, lastIterator); 
-    int maxi = INT_MIN; 
-    for(int k = i;k<=j;k++) {
-    	if(a[k] > maxi) {
-    		maxi = a[k]; 
-    	}
-    }
-
-
-    int el = *max_element(arr, arr+n); 
-    int el = *min_element(arr, arr+n); 
-
-
-    int el = *max_element(vec.begin(), vec.end()); 
-    int el = *min_element(vec.begin(), vec.end()); 
-
-
-
-    // I give you a range and I want you to find the sum in that range 
-    // i - j, tell me the sum in that range i to j 
-    int sum = 0;
-    for(int k = i;k<=j;k++) {
-    	sum += arr[k]; 
-    }
-
-    // accumulate(startIterator, endIterator, initialSum);
-    int sum = accumulate(arr, arr+n, 0); 
-    int sum = accumulate(vec.begin(), vec.end(), 0);
-
-
-    // arr[] -> [1, 6, 7, 1, 2, 1, 3] 
-    // x = 1 
-    // tell me how many times the element 1 occurs in the array 
-    int cnt = 0;
-    // O(N)
-    for(int i = 0;i<n;i++) {
-    	if(arr[i] == x) {
-    		cnt++; 
-    	}
-    } 
-    cout << cnt; 
-
-    /// count(firstIterator, lastIterator, x) 
-    int cnt = count(arr, arr+n, 1);
-    int cnt = count(vec.begin(), vec.end(), 1); 
-
-
-    // arr[] -> {1, 2, 5, 1, 2, 4, 4} 
-    // i want you to find the first occurrence of 2
-    // it is in the index 1 
-
-    int ind = -1; 
-    for(int i = 0;i<n;i++) {
-    	if(arr[i] == x) {
-    		ind = i;
-    		break;
-    	}
-    }
-    cout << ind;
-
-
-    // arr[] -> {1, 2, 5, 1, 2, 4, 4} 
-    auto it = find(arr, arr+n, 2); // return an iterator 
-    // pointing to the first instance of it, or else it 
-    // returns pointing to the end() if it is not there 
-
-    int ind = it - arr; 
-
-
-    auto it = find(vec.begin(), vec.end(), 2); 
-    int ind = it - vec.begin(); 
-
-
-    // arr[] -> {1, 5, 6, 2, 3, 5, 6}
-    // x = 4 
-    auto it = find(vec.begin(), vec.end(), 4); 
-    if(it == vec.end()) {
-    	cout << "element is not present"; 
-    }
-    else {
-    	cout << "Element is first present at: " << it - vec.begin(); 
-    }
 
 
     // binary search 
@@ -193,7 +70,7 @@ int main(int argc, char const *argv[])
     cin >> n;
     int arr[n];
     for(int i = 0;i<n;i++) {
-    	cin >> arr[i]; 
+        cin >> arr[i]; 
     }
 
     int x; 
@@ -211,7 +88,7 @@ int main(int argc, char const *argv[])
     // There are couple of ways to do it
     // 1st way 
     if(binary_search(arr, arr+n, x) == true) {
-    	cout << lower_bound(arr, arr+n, x) - arr; 
+        cout << lower_bound(arr, arr+n, x) - arr; 
     }
     else cout << "does not exists"; 
 
@@ -223,10 +100,10 @@ int main(int argc, char const *argv[])
     // find x = 13 -> ind = 11, which is out of bound 
     // hence arr[11] will give you runtime error 
     if(ind != n && arr[ind] == x) {
-    	cout << "Found at: " << ind;  
+        cout << "Found at: " << ind;  
     }
     else {
-    	cout << "Not found";
+        cout << "Not found";
     }
 
 
@@ -242,10 +119,10 @@ int main(int argc, char const *argv[])
     int ind = upper_bound(arr, arr+n, x) - arr; 
     ind -= 1; 
     if(ind>=0 && arr[ind] == x) {
-    	cout << "last occurrence: " << ind; 
+        cout << "last occurrence: " << ind; 
     }
     else {
-    	cout << "Does not exists"; 
+        cout << "Does not exists"; 
     }
 
 
@@ -284,7 +161,7 @@ int main(int argc, char const *argv[])
     string s = "bca"; 
     sort(s.begin(), s.end()); // this makes the string as "abc"
     do {
-    	cout << s << endl; 
+        cout << s << endl; 
     } while(next_permutation(s.begin(), s.end())); 
 
 
@@ -292,8 +169,8 @@ int main(int argc, char const *argv[])
     int n = 3; 
     sort(arr, arr + n); // this makes the array as {1, 5, 6}
     do {
-    	for(int i = 0;i<n;i++) cout << arr[i] << " "; 
-    	cout << endl; 
+        for(int i = 0;i<n;i++) cout << arr[i] << " "; 
+        cout << endl; 
     } while(next_permutation(arr, arr+n)) ; 
 
 
@@ -323,3 +200,8 @@ int main(int argc, char const *argv[])
 
 
 }
+
+
+
+
+
