@@ -4,64 +4,6 @@ using namespace std;
 int main()
 {
 
-
-
-
-    // binary search 
-    // this stl only works on SORTED arrrays
-    // arr[] -> {1, 5, 7, 9, 10} 
-    // x = 9
-    // true -> 9 exists in my arr 
-    // x = 8 
-    // false -> 8 does not exist in my arr 
-
-
-    // binary_search(firstIterator, lastIterator, x)
-    // returns a true or returns a false 
-    // works in log n complexity 
-    bool res = binary_search(arr, arr+n, 8); 
-    bool res = binary_search(vec.begin(), vec.end(), 8); 
-
-
-
-    // lower_bound function 
-    // returns an iterator pointing to the first
-    // element which is not less than x 
-    // arr[] -> {1, 5, 7, 7, 8, 10, 10, 10, 11, 11, 12} 
-    // x = 10 
-    // x = 6 
-    // x = 13 
-    // this works in log N 
-
-    auto it = lower_bound(arr, arr+n, x); 
-    ind = it - arr; 
-
-    auto it = lower_bound(vec.begin(), vec.end(), x); 
-    int ind = it - vec.begin();
-
-    int ind =  lower_bound(vec.begin(), vec.end(), x) - vec.begin(); 
-
-
-
-    // upper bound 
-    // returns an iterator which points to an element which is 
-    // just greater than x
-    // arr[] -> {1, 5, 7, 7, 8, 10, 10, 10, 11, 11, 12} 
-    // x = 7 
-    // x = 6 
-    // x = 12 -> end() iterator 
-    // x = 15 -> end() iterator 
-
-    auto it = upper_bound(arr, arr+n, x); 
-    ind = it - arr; 
-
-    auto it = upper_bound(vec.begin(), vec.end(), x); 
-    int ind = it - vec.begin();
-
-    int ind =  upper_bound(vec.begin(), vec.end(), x) - vec.begin();
-
-
-
     // Q1. find me the first index where the element X lies 
     // find function can be used but that takes O(N) times
     // the array is sorted.. 
