@@ -1,6 +1,8 @@
 #include <bits/stdc++.h> 
 using namespace std; 
 
+// refer to the docs bitset and algorithms in docs
+
 int main(int argc, char const *argv[])
 {
 	int  n;
@@ -32,9 +34,9 @@ int main(int argc, char const *argv[])
 
 
      /*
-     lower_bound function 
-  	 returns an iterator pointing to the first element which is not less than x 
-  	 arr[] -> {1, 5, 7, 7, 8, 10, 10, 10, 11, 11, 12} 
+    lower_bound function 
+  	returns an iterator pointing to the first element which is not less than x 
+  	arr[] -> {1, 5, 7, 7, 8, 10, 10, 10, 11, 11, 12} 
   	if x = 10, iterator points to 10
   	if x = 6,  iterator points to 7
   	if x = 13, iterator points to end
