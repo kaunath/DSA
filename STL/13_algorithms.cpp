@@ -64,18 +64,14 @@ int main()
      } 
      cout << endl;
 
-    // descending 
-    // greater<int> is an inbuilt comparator
-    // which works only if you wanna do this in descending 
-
-
-
-    // question of pair 
-    // sort(arr, arr+n, greater<pair<int,int>>);
-
-
-    // vector<vector<int>> vec(n, vectorM<int>(n, 0)); 
-
+    /* 
+     descending 
+     greater<int> is an inbuilt comparator. we can replace int in greater<> according 
+     to our conatainer as char, vector, pair etc
+     which works only if you wanna do this in descending 
+     question of pair 
+     sort(arr, arr+n, greater<pair<int,int>>);
+    */
 
 
 }
