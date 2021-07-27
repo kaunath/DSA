@@ -73,10 +73,4 @@ int main()
      sort(arr, arr+n, greater<pair<int,int>>);
     */
 
-
 }
-
-
-
-
-
