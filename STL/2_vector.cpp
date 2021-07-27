@@ -113,7 +113,7 @@ cout<< "printing element of vector using traditional for loop ";
 	
 	vect[2].push_back(1); 
 
-	cout << "printing element for array of vector" <<endl;
+	cout << "printing element for array of vector" << endl;
 	vector<int> arr_4[4]; 
 	arr_4[0].push_back(0); 
 	arr_4[1].push_back(112); 

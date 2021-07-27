@@ -27,7 +27,7 @@ int main() {
     i want you to print all the permutations 
     */
 
-    string s2 = "bcadefghij"; 
+    string s2 = "bca"; 
     sort(s2.begin(), s2.end()); // this makes the string as "abc"
     do {
         cout << s2 << endl; 
