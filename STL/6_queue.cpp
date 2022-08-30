@@ -24,7 +24,8 @@ operations in a queue are push, front, pop, size, empty
 	cout << q.front()<< endl; // prints 5 
 
 	// linear time 
-	while(!q.empty()) {
+	while(!q.empty()) 
+	{
 		q.pop(); 
 	}
 
@@ -62,7 +63,7 @@ operations in a queue are push, front, pop, size, empty
 	min_pq.push(7);
 	min_pq.push(15);
 	cout << min_pq.top()<<endl;
-	 min_pq.pop();
+	min_pq.pop();
 	cout << min_pq.top()<<endl;
 
 	//make min_pq using priority queue

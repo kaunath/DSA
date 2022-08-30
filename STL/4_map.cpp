@@ -47,6 +47,8 @@ int main()
 	cout << "another way" << endl;
 	for(auto it = mpp.begin(); it!=mpp.end();it++) {
 		cout << it->first << " " << it->second << endl; 
+		//OR
+		//cout << (*it).first << " " << (*it).second << endl; 
 	}
 
 	/* Won't work
